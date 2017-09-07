@@ -61,13 +61,10 @@ CodeDeploy & EC2CodeDeploy
  &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;    cd /home/ec2-user
         <br />
         <br />
- &nbsp;&nbsp;&nbsp;&nbsp;   b. Here you will setup your AWS access, secret, and region.
+ &nbsp;&nbsp;&nbsp;&nbsp;   b. Here you will setup your CodeDeploy.
     <br />
     <br />
-   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     aws configure
-        <br />
-        <br />
-    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    aws s3 cp s3://aws-codedeploy-cn-north-1/latest/install . --region cn-north-1 (if in east AWS)
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    aws s3 cp s3://aws-codedeploy-cn-north-1/latest/install . --region cn-north-1
         <br />
         <br />
    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     chmod +x ./install
