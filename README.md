@@ -28,22 +28,13 @@ CodeDeploy & EC2CodeDeploy
   &nbsp;&nbsp;&nbsp;&nbsp;  d. Tag Instance: Name it what you please
     <br />
     <br />
-  &nbsp;&nbsp;&nbsp;&nbsp;  e. Configure Security Group: 
+  &nbsp;&nbsp;&nbsp;&nbsp;  e. Configure Security Group:
     <br />
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        HTTP TCP 80 0.0.0.0/0
         <br />
         <br />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      HTTP TCP 80 ::/0
-        <br />
-        <br />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      SSH TCP 22 (YOUR IP ADDRESS)
-        <br />
-        <br />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      HTTPS TCP 443 0.0.0.0/0
-        <br />
-        <br />
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     HTTPS TCP 443 ::/0
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;    f. LAUNCH INSTANCE
@@ -52,7 +43,7 @@ CodeDeploy & EC2CodeDeploy
 3. Login to EC2 instance
 <br />
 <br />
-4. Command line of Amazon Linux AMI 
+4. Command line of Amazon Linux AMI
 <br />
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;    a. When server is booted
@@ -76,10 +67,7 @@ CodeDeploy & EC2CodeDeploy
    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     aws configure
         <br />
         <br />
-    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    aws s3 cp s3://aws-codedeploy-us-east-1/latest/install . --region us-east-1 (if in east AWS)
-        <br />
-        <br />
-    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; aws s3 cp s3://aws-codedeploy-us-west-2/latest/install . --region us-west-2 (if in west AWS)
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    aws s3 cp s3://aws-codedeploy-cn-north-1/latest/install . --region cn-north-1 (if in east AWS)
         <br />
         <br />
    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     chmod +x ./install
@@ -88,9 +76,6 @@ CodeDeploy & EC2CodeDeploy
   &nbsp;&nbsp;&nbsp;&nbsp;  c. This is simply a quick hack to get the agent running faster.
     <br />
     <br />
-  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;      sed -i "s/sleep(.*)/sleep(10)/" install
-        <br />
-        <br />
    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     ./install auto
         <br />
         <br />
@@ -98,5 +83,3 @@ CodeDeploy & EC2CodeDeploy
     <br />
     <br />
    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     service codedeploy-agent status
-
-   
